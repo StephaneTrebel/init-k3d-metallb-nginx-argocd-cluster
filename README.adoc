@@ -1,0 +1,32 @@
+= A propos
+
+This repo is based on a link:./Makefile[Makefile] and a couple scripts to handle the easy boostrapping of:
+
+* A https://k3d.io[k3d] cluster installed locally with one server and three agents
+
+NOTE: Having three agents helps in simulating a «true» cluster, with its multiple nodes.
+
+* With https://metallb.org/[metallb] as its external Load Balancer
+
+NOTE: This is also for better simulation purposes, and because I wanted to practice a bit with metallb configuration
+
+* With https://docs.nginx.com/nginx-ingress-controller/[nginx ingress controller] as its, well, Ingress Controller 😁
+
+NOTE: This is also for better «real world» simulation purposes, and also because a lot of ingresses are Nginx and not Traefik based 🥲
+
+== Requirements
+
+I don't like to locally install CLIs through Makefiles so here is a list of all the tools used.
+Feel free to fork and adapt to your convenience !
+
+* GNU make v4.3
+* k3d v5.4.6 (k3s v1.24.4)
+* kubectl v1.26.1
+* argocd v2.3.13
+* https://www.passwordstore.org/[pass] v1.7.4
+
+== How to use
+
+Well, it's all in the link:./Makefile[Makefile] !
+
+Just follow the rules in their order and you should be fine 😉

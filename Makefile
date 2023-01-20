@@ -1,16 +1,5 @@
 CLUSTER_NAME=local-cluster
 
-# Not installed here:
-# - kubectl v1.26.1
-# - k3d v5.4.6 (k3s v1.24.4)
-# - helm v3.11.0-rc.2
-# - argocd v2.3.13
-# - make v4.3
-.PHONY: requirements
-requirements:
-	sudo apt update
-	sudo apt install pass
-
 .PHONY: create-local-cluster
 create-local-cluster:
 	k3d cluster create \
